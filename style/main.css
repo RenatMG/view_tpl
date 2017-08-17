@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    min-width: 800px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/*header*/
+header {
+    height: 150px;
+    background-color: darkred;
+    position: relative;
+}
+
+.header__logo {
+    width: 20%;
+    height: 70px;
+    background-color: antiquewhite;
+    margin-top: 20px;
+    float: left;
+}
+
+.header__name {
+    width: 20%;
+    height: 70px;
+    font-style: italic;
+    font-size: 38px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 50px;
+    float: left;
+}
+
+.header__nav {
+    width: 50%;
+    height: 70px;
+    background-color: antiquewhite;
+    float: right;
+    margin-top: 20px;
+
+}
+
+/*left block*/
+.left-block {
+    height: 500px;
+    width: 25%;
+    min-width: 220px;
+    background-color: #ffb788;
+    padding-left: 10px;
+    float: left;
+}
+
+.menu li {
+    width: 100%;
+    list-style: none;
+}
+
+.menu li:hover {
+    background-color: antiquewhite;
+}
+
+/*content*/
+
+.content {
+    width: 45%;
+    padding-left: 20px;
+    float: left;
+}
+
+.content__headers {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content__date {
+    text-align: right;
+}
+
+.content__detailed {
+    text-align: right;
+}
+
+.content__pagination a {
+    display: inline-block;
+}
+
+/*right block*/
+.right-block {
+    width: 25%;
+    min-width: 220px;
+    background-color: #ff6100;
+    padding-left: 10px;
+    float: right;
+}
+
+.marketing {
+    height: 500px;
+}
+
+.banner {
+    height: 200px;
+    width: 200px;
+    background-color: blanchedalmond;
+    margin: 10px auto;
+}
+
+/*footer*/
+.empty1 {
+    height: 100px;
+}
+
+.empty2 {
+    height: 150px;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    margin-top: -150px;
+    background-color: aliceblue;
+}
+
+/*блок регистрации*/
+.block-registration {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.reg-field{
+    margin-bottom: 10px;
+}
+.reg-field label{
+    width: 100px;
+    display: block;
+    float: left;
+}
+.reg-field input{
+    width: 200px;
+}
+
+
+#reg-submit {
+    height: 30px;
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+#reg-message {
+    color: red;
+    text-align: center;
+}
+.content__message{
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+
