@@ -1,8 +1,6 @@
 <?php
 
-require_once 'config/config.php';
-
-class View
+class View_class
 {
     protected $tpl_dir;
 

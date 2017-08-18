@@ -1,4 +1,5 @@
 <?php
+namespace data;
 $menuData = [
     'menu' => [
         'Topic_1', 'Topic_2', 'Topic_3', 'Topic_4',

@@ -1,20 +1,27 @@
 <?php
-require_once 'config' . DIRECTORY_SEPARATOR . 'config.php';
-require_once 'data' . DIRECTORY_SEPARATOR . 'page_data.php';
-require_once 'view_class.php';
+
+require_once 'autoload.php';
 
 
-$html = new View(TEMPLATE_ROOT);
+try {
+    $inst = View::run();
+    $data = [
+        'article' => 'Привет Мир!!!!',
+        'menu' => $inst->render('menu', $menuData),
+        'auth' => $inst->render('auth'),
+        'topic' => $inst->render('topic', $topicData),
+        'main_topic' => $inst->render('main_topic', array('text' => 'Helooooo'), 1),
+        'tp' => $inst->render('topic_paggination', $tpData),
+        'search' => $inst->render('search'),
+    ];
+    echo $inst->render('main', $data);
 
+} catch (Exception $e){
+    echo 'Ошибка: '. $e->getMessage().'<br>';
+    if(DEV_MODE){
+        echo 'Ошибка в файле: '. $e->getFile().'<br>';
+        echo 'Ошибка в строке: '. $e->getLine().'<br>';
+        echo 'Код ошибки: '.$e->getCode().'<br>';
+    }
 
-$data = [
-    'article' => 'Привет Мир!!!!',
-    'menu' => $html->render('menu', $menuData),
-    'auth' => $html->render('auth'),
-    'topic' => $html->render('topic', $topicData),
-    'main_topic' => $html->render('main_topic'),
-    'tp' => $html->render('topic_pagination', $tpData),
-    'search' => $html->render('search'),
-];
-echo $html->render('main', $data);
-
+}
