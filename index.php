@@ -1,7 +1,7 @@
 <?php
 
-//require_once 'autoload.php';
-require_once 'View.php';
+require_once 'autoload.php';
+//require_once 'View.php';
 
 
 try {
