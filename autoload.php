@@ -1,10 +1,6 @@
 <?php
 
-use exceptions;
 
-/**
- * @param $className
- */
 function autoload($className){
     $fileName = str_replace('\\', '/', $className) . '.php';
   echo $fileName;
