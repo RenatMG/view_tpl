@@ -10,7 +10,7 @@
 + *1 Скопировать файл View.php*
 + *2 Выполнить View::run()*
 + *3 Скопиролвать HelperHtml.php, autoloader.php, exceptions*
-+ *4 Создать папку с шаблонами, зарегистрировать имя папки методом View::tmplDirRegister('template_directory')*
++ *4 Создать папку с шаблонами, зарегистрировать имя папки методом tmplDirRegister('template_directory')*
         *Где 'template_directory' это название папки с шаблонами, по умолчанию 'tmpl'*    
 #### *Дополнительно*
 + *1 Автозагрузчик классов*

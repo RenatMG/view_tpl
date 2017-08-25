@@ -3,6 +3,7 @@ require_once 'autoload.php';
 define('DEV_MODE', true); // мод для разработчика, true/false
 try {
     $page = View::run();
+//    View::tmplDirRegister('template_directory');
 
     // Тестовые данные
     $menuData = [

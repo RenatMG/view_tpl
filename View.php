@@ -12,7 +12,7 @@ class View
 
     public static $instance = null;
     protected $ext = '.tpl.php';
-    protected $tpl_dir = 'tmpl/';
+    protected $tpl_dir = 'tmpl';
 
 
     public static function run()
@@ -40,7 +40,7 @@ class View
     private function getTemplate($templateName)
     {
 
-        $template = $this->tpl_dir . $templateName . $this->ext;
+        $template = $this->tpl_dir.DIRECTORY_SEPARATOR. $templateName . $this->ext;
         // исключения,  коды 111, 112 для примера
         if (!file_exists($template)) {
             throw new TplFileNotFoundException('File ' . $templateName . $this->ext . ' is not found!', 111);
