@@ -1,3 +1,5 @@
+<?php //PhpDoc ?>
+<?php /** @var array $menu */ ?>
 <div class="menu">
     <p>Список тем:</p>
     <ul>

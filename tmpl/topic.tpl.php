@@ -1,3 +1,5 @@
+<?php //PhpDoc ?>
+<?php /** @var array $topic */ ?>
 <?php foreach ($topic as $topicItem): ?>
     <p class="content__headers"><?=$topicItem?></p>
     <p class="content__text">Текст статьи</p>

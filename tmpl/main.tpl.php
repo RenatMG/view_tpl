@@ -15,12 +15,7 @@
 
 <div class="container">
     <!--header begin-->
-    <header>
-        <div class="header__logo"></div>
-        <div class="header__name">Shop</div>
-        <div class="header__nav"></div>
-        <div class="clear"></div>
-    </header>
+    <?= $header ?>
     <!--header end-->
 
     <!--left block start-->
@@ -56,9 +51,7 @@
     <div class="clear"></div>
     <div class="empty1"></div>
     <div class="empty2"></div>
-    <footer>
-        <p>Все права защищены &copy;</p>
-    </footer>
+    <?= $footer ?>
 
 </div>
 </body>

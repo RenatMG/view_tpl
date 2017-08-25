@@ -1,21 +1,38 @@
 <?php
-
 require_once 'autoload.php';
-//require_once 'View.php';
-
-
+define('DEV_MODE', true); // мод для разработчика, true/false
 try {
-    $inst = View::run();
+    $page = View::run();
+
+    // Тестовые данные
+    $menuData = [
+        'menu' => [
+            'Topic_1', 'Topic_2', 'Topic_3', 'Topic_4',
+        ]
+    ];
+    $topicData = [
+        'topic' => [
+            'About', 'Contacts', 'Price',
+        ]
+    ];
+    $tpData = [
+        'tp' => [
+            '1', '2', '3', '4', '<h2>5</h2>', // Здесь мы применим обработчик HelperHtml
+        ]
+    ];
+
     $data = [
         'article' => 'Привет Мир!!!!',
-        'menu' => $inst->render('menu', $menuData),
-        'auth' => $inst->render('auth'),
-        'topic' => $inst->render('topic', $topicData),
-        'main_topic' => $inst->render('main_topic', array('text' => 'Helooooo'), 1),
-        'tp' => $inst->render('topic_paggination', $tpData),
-        'search' => $inst->render('search'),
+        'header' => $page->render('header', array('shop_name'=>'MyShop'), 1), // Здесь мы применяем тип переменных по подобию Twig
+        'menu' => $page->render('menu', $menuData),
+        'auth' => $page->render('auth'),
+        'topic' => $page->render('topic', $topicData),
+        'main_topic' => $page->render('main_topic', array('article_1'=>'This is my topic!','article_2'=>'This is my topic too!')),
+        'tp' => $page->render('topic_pagination', $tpData),
+        'search' => $page->render('search'),
     ];
-    echo $inst->render('main', $data);
+    // рендер основного шаблона
+    echo $page->render('main', $data);
 
 } catch (Exception $e){
     echo 'Ошибка: '. $e->getMessage().'<br>';
@@ -24,5 +41,4 @@ try {
         echo 'Ошибка в строке: '. $e->getLine().'<br>';
         echo 'Код ошибки: '.$e->getCode().'<br>';
     }
-
 }
